@@ -1,4 +1,91 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Agenda" representedClassName="Agenda" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lang" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pageRefTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pageRefURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="exposition" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Exposition" inverseName="agendas" inverseEntity="Exposition" syncable="YES"/>
+        <relationship name="expositionType" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ExpositionType" inverseName="agendas" inverseEntity="ExpositionType" syncable="YES"/>
+        <relationship name="groupType" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="GroupType" inverseName="agenda" inverseEntity="GroupType" syncable="YES"/>
+        <relationship name="links" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Link" inverseName="agenda" inverseEntity="Link" syncable="YES"/>
+        <relationship name="period" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Period" inverseName="agendas" inverseEntity="Period" syncable="YES"/>
+        <fetchIndex name="byId">
+            <fetchIndexElement property="identifier" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="Exposition" representedClassName="Exposition" syncable="YES">
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="controlType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="expositionDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maxVisitorsPerGroup" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="maxVisitorsPerPeriodWeb" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="agendas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Agenda" inverseName="exposition" inverseEntity="Agenda" syncable="YES"/>
+        <relationship name="price" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Price" inverseName="expositions" inverseEntity="Price" syncable="YES"/>
+        <fetchIndex name="byId">
+            <fetchIndexElement property="identifier" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="ExpositionType" representedClassName="ExpositionType" syncable="YES">
+        <attribute name="friendlyName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="guid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="agendas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Agenda" inverseName="expositionType" inverseEntity="Agenda" syncable="YES"/>
+        <fetchIndex name="byId">
+            <fetchIndexElement property="guid" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="GroupType" representedClassName="GroupType" syncable="YES">
+        <attribute name="friendlyName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="guid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="agenda" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Agenda" inverseName="groupType" inverseEntity="Agenda" syncable="YES"/>
+        <fetchIndex name="byId">
+            <fetchIndexElement property="guid" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="Link" representedClassName="Link" syncable="YES">
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="agenda" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Agenda" inverseName="links" inverseEntity="Agenda" syncable="YES"/>
+    </entity>
+    <entity name="Period" representedClassName="Period" syncable="YES">
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="current" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maximum" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="remaining" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="agendas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Agenda" inverseName="period" inverseEntity="Agenda" syncable="YES"/>
+        <fetchIndex name="byId">
+            <fetchIndexElement property="identifier" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <fetchIndex name="byDate">
+            <fetchIndexElement property="startDate" type="Binary" order="ascending"/>
+            <fetchIndexElement property="endDate" type="Binary" order="descending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="Price" representedClassName="Price" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="calculationType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="expositions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exposition" inverseName="price" inverseEntity="Exposition" syncable="YES"/>
+        <fetchIndex name="byId">
+            <fetchIndexElement property="identifier" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <elements>
+        <element name="Agenda" positionX="-63" positionY="-18" width="128" height="195"/>
+        <element name="Exposition" positionX="-54" positionY="18" width="128" height="180"/>
+        <element name="Price" positionX="-36" positionY="72" width="128" height="105"/>
+        <element name="ExpositionType" positionX="-18" positionY="81" width="128" height="105"/>
+        <element name="GroupType" positionX="-9" positionY="117" width="128" height="105"/>
+        <element name="Period" positionX="0" positionY="126" width="128" height="180"/>
+        <element name="Link" positionX="18" positionY="180" width="128" height="90"/>
+    </elements>
 </model>

@@ -1,0 +1,52 @@
+{
+    "elapsedMilliseconds": 8,
+    "options": [
+        {
+            "links": {
+                "availability": "https://www.rijksmuseum.nl/api/nl/agenda/2019-07-13/exposition/f128f25b-a50f-e711-80cd-5820b1e20440/availability/bd5eb8aa-ee4e-e911-80c7-5820b1e20440",
+                "web": "https://www.rijksmuseum.nl/nl/groepsreservering/deeplink?groupTypeId=a66a5578-6d5b-41cb-a714-f1b90b5a172c&expositionTypeId=a268f42f-7ac7-49fb-a262-2b0a2ddf465c&expositionId=f128f25b-a50f-e711-80cd-5820b1e20440&expositionPeriodId=bd5eb8aa-ee4e-e911-80c7-5820b1e20440&shortdate=2019-07-13"
+            },
+            "id": "nl-f128f25b-a50f-e711-80cd-5820b1e20440-bd5eb8aa-ee4e-e911-80c7-5820b1e20440",
+            "lang": "nl",
+            "date": "2019-07-12T22:00:00Z",
+            "period": {
+                "id": "bd5eb8aa-ee4e-e911-80c7-5820b1e20440",
+                "startDate": "2019-07-13T10:00:00Z",
+                "endDate": "2019-07-13T11:00:00Z",
+                "current": 12,
+                "maximum": 15,
+                "remaining": 3,
+                "code": null,
+                "text": "12:00 - 13:00"
+            },
+            "exposition": {
+                "id": "f128f25b-a50f-e711-80cd-5820b1e20440",
+                "name": "Familierondleiding Hoogtepunten ",
+                "description": "Familierondleiding Hoogtepunten\r\n\r\nDe rondleiding start bij de Informatiebalie in het Atrium van het museum. U kunt zich voor aanvang van de rondleiding daar melden.\r\n\r\nMet deze reserveringsbevestiging hoeft u niet in de wachtrij buiten. \r\nHeeft u nog een ticket voor het museum nodig? Koop deze dan online of bij de kassa in het museum. Houd er wel rekening mee dat het bij de kassa en garderobe druk kan zijn.\r\n\r\nDeze rondleiding is specifiek bedoeld voor families mét kinderen van 6 tot 12 jaar.\r\n",
+                "code": "E100026_2017",
+                "controlType": 0,
+                "maxVisitorsPerGroup": 0,
+                "maxVisitorsPerPeriodWeb": 15,
+                "price": {
+                    "id": "f2bcee29-0bba-4aea-842b-bcff60b38eb5",
+                    "calculationType": 2,
+                    "amount": 5.0000
+                }
+            },
+            "groupType": {
+                "type": "GroupTypeRef",
+                "guid": "a66a5578-6d5b-41cb-a714-f1b90b5a172c",
+                "friendlyName": "Families en Kinderen"
+            },
+            "pageRef": {
+                "title": "Familierondleiding Hoogtepunten",
+                "url": "https://www.rijksmuseum.nl/nl/families-onderwijs-of-groepen/families-en-kinderen/familierondleidingen/familierondleiding-hoogtepunten"
+            },
+            "expositionType": {
+                "type": "ExpositionTypeRef",
+                "guid": "a268f42f-7ac7-49fb-a262-2b0a2ddf465c",
+                "friendlyName": "Rondleiding families & kinderen"
+            }
+        }
+    ]
+}

@@ -3,17 +3,124 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		19D2FA7C22D61BC5006CF3AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FA7B22D61BC5006CF3AB /* AppDelegate.swift */; };
-		19D2FA7E22D61BC5006CF3AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FA7D22D61BC5006CF3AB /* ViewController.swift */; };
 		19D2FA8122D61BC5006CF3AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FA7F22D61BC5006CF3AB /* Main.storyboard */; };
 		19D2FA8422D61BC5006CF3AB /* RijksMuseum.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FA8222D61BC5006CF3AB /* RijksMuseum.xcdatamodeld */; };
 		19D2FA8622D61BC8006CF3AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FA8522D61BC8006CF3AB /* Assets.xcassets */; };
 		19D2FA8922D61BC8006CF3AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FA8722D61BC8006CF3AB /* LaunchScreen.storyboard */; };
-		19D2FA9422D61BC9006CF3AB /* RijksMuseumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FA9322D61BC9006CF3AB /* RijksMuseumTests.swift */; };
+		19D2FAA022D62057006CF3AB /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FA9F22D62057006CF3AB /* URL.swift */; };
+		19D2FAA122D62057006CF3AB /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FA9F22D62057006CF3AB /* URL.swift */; };
+		19D2FAA322D6208D006CF3AB /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAA222D6208D006CF3AB /* URLRequest.swift */; };
+		19D2FAA422D6208D006CF3AB /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAA222D6208D006CF3AB /* URLRequest.swift */; };
+		19D2FAA722D620DF006CF3AB /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAA622D620DF006CF3AB /* Network.swift */; };
+		19D2FAA822D620DF006CF3AB /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAA622D620DF006CF3AB /* Network.swift */; };
+		19D2FAAA22D6210D006CF3AB /* NetworkSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAA922D6210D006CF3AB /* NetworkSessionProtocol.swift */; };
+		19D2FAAB22D6210D006CF3AB /* NetworkSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAA922D6210D006CF3AB /* NetworkSessionProtocol.swift */; };
+		19D2FAAD22D62131006CF3AB /* NetworkURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAAC22D62131006CF3AB /* NetworkURLSession.swift */; };
+		19D2FAB022D62164006CF3AB /* NetworkActivityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAAF22D62164006CF3AB /* NetworkActivityProtocol.swift */; };
+		19D2FAB122D62164006CF3AB /* NetworkActivityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAAF22D62164006CF3AB /* NetworkActivityProtocol.swift */; };
+		19D2FAB422D62257006CF3AB /* PersistenceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAB322D62257006CF3AB /* PersistenceProtocol.swift */; };
+		19D2FAB522D62257006CF3AB /* PersistenceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAB322D62257006CF3AB /* PersistenceProtocol.swift */; };
+		19D2FAB722D622CA006CF3AB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAB622D622CA006CF3AB /* Persistence.swift */; };
+		19D2FAB822D622CA006CF3AB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAB622D622CA006CF3AB /* Persistence.swift */; };
+		19D2FAC922D763B8006CF3AB /* Link+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FABB22D763B8006CF3AB /* Link+CoreDataClass.swift */; };
+		19D2FACA22D763B8006CF3AB /* Link+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FABB22D763B8006CF3AB /* Link+CoreDataClass.swift */; };
+		19D2FACB22D763B8006CF3AB /* Link+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FABC22D763B8006CF3AB /* Link+CoreDataProperties.swift */; };
+		19D2FACC22D763B8006CF3AB /* Link+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FABC22D763B8006CF3AB /* Link+CoreDataProperties.swift */; };
+		19D2FACD22D763B8006CF3AB /* Price+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FABD22D763B8006CF3AB /* Price+CoreDataClass.swift */; };
+		19D2FACE22D763B8006CF3AB /* Price+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FABD22D763B8006CF3AB /* Price+CoreDataClass.swift */; };
+		19D2FACF22D763B8006CF3AB /* Price+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FABE22D763B8006CF3AB /* Price+CoreDataProperties.swift */; };
+		19D2FAD022D763B8006CF3AB /* Price+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FABE22D763B8006CF3AB /* Price+CoreDataProperties.swift */; };
+		19D2FAD122D763B8006CF3AB /* Agenda+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FABF22D763B8006CF3AB /* Agenda+CoreDataClass.swift */; };
+		19D2FAD222D763B8006CF3AB /* Agenda+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FABF22D763B8006CF3AB /* Agenda+CoreDataClass.swift */; };
+		19D2FAD322D763B8006CF3AB /* Agenda+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAC022D763B8006CF3AB /* Agenda+CoreDataProperties.swift */; };
+		19D2FAD422D763B8006CF3AB /* Agenda+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAC022D763B8006CF3AB /* Agenda+CoreDataProperties.swift */; };
+		19D2FAD522D763B8006CF3AB /* Period+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAC122D763B8006CF3AB /* Period+CoreDataClass.swift */; };
+		19D2FAD622D763B8006CF3AB /* Period+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAC122D763B8006CF3AB /* Period+CoreDataClass.swift */; };
+		19D2FAD722D763B8006CF3AB /* Period+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAC222D763B8006CF3AB /* Period+CoreDataProperties.swift */; };
+		19D2FAD822D763B8006CF3AB /* Period+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAC222D763B8006CF3AB /* Period+CoreDataProperties.swift */; };
+		19D2FAD922D763B8006CF3AB /* GroupType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAC322D763B8006CF3AB /* GroupType+CoreDataClass.swift */; };
+		19D2FADA22D763B8006CF3AB /* GroupType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAC322D763B8006CF3AB /* GroupType+CoreDataClass.swift */; };
+		19D2FADB22D763B8006CF3AB /* GroupType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAC422D763B8006CF3AB /* GroupType+CoreDataProperties.swift */; };
+		19D2FADC22D763B8006CF3AB /* GroupType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAC422D763B8006CF3AB /* GroupType+CoreDataProperties.swift */; };
+		19D2FADD22D763B8006CF3AB /* Exposition+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAC522D763B8006CF3AB /* Exposition+CoreDataClass.swift */; };
+		19D2FADE22D763B8006CF3AB /* Exposition+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAC522D763B8006CF3AB /* Exposition+CoreDataClass.swift */; };
+		19D2FADF22D763B8006CF3AB /* Exposition+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAC622D763B8006CF3AB /* Exposition+CoreDataProperties.swift */; };
+		19D2FAE022D763B8006CF3AB /* Exposition+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAC622D763B8006CF3AB /* Exposition+CoreDataProperties.swift */; };
+		19D2FAE122D763B8006CF3AB /* ExpositionType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAC722D763B8006CF3AB /* ExpositionType+CoreDataClass.swift */; };
+		19D2FAE222D763B8006CF3AB /* ExpositionType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAC722D763B8006CF3AB /* ExpositionType+CoreDataClass.swift */; };
+		19D2FAE322D763B8006CF3AB /* ExpositionType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAC822D763B8006CF3AB /* ExpositionType+CoreDataProperties.swift */; };
+		19D2FAE422D763B8006CF3AB /* ExpositionType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAC822D763B8006CF3AB /* ExpositionType+CoreDataProperties.swift */; };
+		19D2FAE722D76407006CF3AB /* Agenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAE622D76407006CF3AB /* Agenda.swift */; };
+		19D2FAE822D76407006CF3AB /* Agenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAE622D76407006CF3AB /* Agenda.swift */; };
+		19D2FAEA22D7700B006CF3AB /* Exposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAE922D7700B006CF3AB /* Exposition.swift */; };
+		19D2FAEB22D7700B006CF3AB /* Exposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAE922D7700B006CF3AB /* Exposition.swift */; };
+		19D2FAED22D772C8006CF3AB /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAEC22D772C8006CF3AB /* Price.swift */; };
+		19D2FAEE22D772C8006CF3AB /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAEC22D772C8006CF3AB /* Price.swift */; };
+		19D2FAF022D7757A006CF3AB /* ExpositionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAEF22D7757A006CF3AB /* ExpositionType.swift */; };
+		19D2FAF122D7757A006CF3AB /* ExpositionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAEF22D7757A006CF3AB /* ExpositionType.swift */; };
+		19D2FAF422D7779C006CF3AB /* GroupType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAF322D7779C006CF3AB /* GroupType.swift */; };
+		19D2FAF522D7779C006CF3AB /* GroupType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAF322D7779C006CF3AB /* GroupType.swift */; };
+		19D2FAF722D77915006CF3AB /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAF622D77915006CF3AB /* Period.swift */; };
+		19D2FAF822D77915006CF3AB /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAF622D77915006CF3AB /* Period.swift */; };
+		19D2FAFA22D77BFC006CF3AB /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAF922D77BFC006CF3AB /* Link.swift */; };
+		19D2FAFB22D77BFC006CF3AB /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAF922D77BFC006CF3AB /* Link.swift */; };
+		19D2FAFF22D89D91006CF3AB /* ArtObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAFD22D89D91006CF3AB /* ArtObject+CoreDataClass.swift */; };
+		19D2FB0022D89D91006CF3AB /* ArtObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAFD22D89D91006CF3AB /* ArtObject+CoreDataClass.swift */; };
+		19D2FB0122D89D91006CF3AB /* ArtObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAFE22D89D91006CF3AB /* ArtObject+CoreDataProperties.swift */; };
+		19D2FB0222D89D91006CF3AB /* ArtObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FAFE22D89D91006CF3AB /* ArtObject+CoreDataProperties.swift */; };
+		19D2FB0422D89FE9006CF3AB /* ArtObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB0322D89FE9006CF3AB /* ArtObject.swift */; };
+		19D2FB0522D89FE9006CF3AB /* ArtObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB0322D89FE9006CF3AB /* ArtObject.swift */; };
+		19D2FB0922D8AB41006CF3AB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB0822D8AB41006CF3AB /* MainViewController.swift */; };
+		19D2FB0D22D8AC3E006CF3AB /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB0C22D8AC3E006CF3AB /* Fonts.swift */; };
+		19D2FB1222D8AD78006CF3AB /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB1122D8AD78006CF3AB /* AgendaViewController.swift */; };
+		19D2FB1522D8AD95006CF3AB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB1422D8AD95006CF3AB /* CollectionViewController.swift */; };
+		19D2FB1822D8AF50006CF3AB /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB1722D8AF50006CF3AB /* Localizations.swift */; };
+		19D2FB1C22D8BAC7006CF3AB /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB1B22D8BAC7006CF3AB /* Date.swift */; };
+		19D2FB1D22D8BAC7006CF3AB /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB1B22D8BAC7006CF3AB /* Date.swift */; };
+		19D2FB1F22D8BB3A006CF3AB /* AgendaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB1E22D8BB3A006CF3AB /* AgendaCell.swift */; };
+		19D2FB3522D8C695006CF3AB /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB2322D8C694006CF3AB /* Roboto-Black.ttf */; };
+		19D2FB3722D8C695006CF3AB /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB2422D8C694006CF3AB /* Roboto-BlackItalic.ttf */; };
+		19D2FB3922D8C695006CF3AB /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB2522D8C694006CF3AB /* RobotoCondensed-Light.ttf */; };
+		19D2FB3B22D8C695006CF3AB /* RobotoCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB2622D8C694006CF3AB /* RobotoCondensed-BoldItalic.ttf */; };
+		19D2FB3D22D8C695006CF3AB /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB2722D8C694006CF3AB /* Roboto-MediumItalic.ttf */; };
+		19D2FB3F22D8C695006CF3AB /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB2822D8C695006CF3AB /* Roboto-Regular.ttf */; };
+		19D2FB4122D8C695006CF3AB /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB2922D8C695006CF3AB /* Roboto-ThinItalic.ttf */; };
+		19D2FB4322D8C695006CF3AB /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB2A22D8C695006CF3AB /* RobotoCondensed-LightItalic.ttf */; };
+		19D2FB4522D8C695006CF3AB /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB2B22D8C695006CF3AB /* Roboto-BoldItalic.ttf */; };
+		19D2FB4722D8C695006CF3AB /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB2C22D8C695006CF3AB /* Roboto-LightItalic.ttf */; };
+		19D2FB4922D8C695006CF3AB /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB2D22D8C695006CF3AB /* Roboto-Thin.ttf */; };
+		19D2FB4B22D8C695006CF3AB /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB2E22D8C695006CF3AB /* RobotoCondensed-Regular.ttf */; };
+		19D2FB4D22D8C695006CF3AB /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB2F22D8C695006CF3AB /* Roboto-Medium.ttf */; };
+		19D2FB4F22D8C695006CF3AB /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB3022D8C695006CF3AB /* RobotoCondensed-Italic.ttf */; };
+		19D2FB5122D8C695006CF3AB /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB3122D8C695006CF3AB /* Roboto-Italic.ttf */; };
+		19D2FB5322D8C695006CF3AB /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB3222D8C695006CF3AB /* Roboto-Light.ttf */; };
+		19D2FB5522D8C695006CF3AB /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB3322D8C695006CF3AB /* RobotoCondensed-Bold.ttf */; };
+		19D2FB5722D8C695006CF3AB /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB3422D8C695006CF3AB /* Roboto-Bold.ttf */; };
+		19D2FB5A22D907C6006CF3AB /* AlertDialogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB5922D907C6006CF3AB /* AlertDialogs.swift */; };
+		19D2FB5C22D9142F006CF3AB /* ArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB5B22D9142F006CF3AB /* ArtCell.swift */; };
+		19D2FB5E22D91CDC006CF3AB /* ArtSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB5D22D91CDC006CF3AB /* ArtSearchView.swift */; };
+		19D2FB6022D9887F006CF3AB /* ArtDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB5F22D9887F006CF3AB /* ArtDetailViewController.swift */; };
+		19D2FB6422D9D84A006CF3AB /* CachedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB6322D9D84A006CF3AB /* CachedViewController.swift */; };
+		19D2FB6722DA4591006CF3AB /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB6622DA4591006CF3AB /* JSONLoader.swift */; };
+		19D2FB6B22DA45CC006CF3AB /* RijksMuseum.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FA8222D61BC5006CF3AB /* RijksMuseum.xcdatamodeld */; };
+		19D2FB6D22DA46AD006CF3AB /* agendas.json in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB6C22DA46AD006CF3AB /* agendas.json */; };
+		19D2FB6F22DA4717006CF3AB /* artobjects.json in Resources */ = {isa = PBXBuildFile; fileRef = 19D2FB6E22DA4717006CF3AB /* artobjects.json */; };
+		19D2FB7222DA47C7006CF3AB /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB7122DA47C7006CF3AB /* PersistenceTests.swift */; };
+		19D2FB7522DA4994006CF3AB /* MockPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB7422DA4994006CF3AB /* MockPersistence.swift */; };
+		19D2FB7722DA4A5A006CF3AB /* MockNetworkURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB7622DA4A5A006CF3AB /* MockNetworkURLSession.swift */; };
+		19D2FB7922DA4B68006CF3AB /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB7822DA4B68006CF3AB /* NetworkTests.swift */; };
+		19D2FB7C22DA515A006CF3AB /* MockNetworkActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB7B22DA515A006CF3AB /* MockNetworkActivity.swift */; };
+		19D2FB7E22DB2BB2006CF3AB /* NetworkOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB7D22DB2BB2006CF3AB /* NetworkOperationQueue.swift */; };
+		19D2FB7F22DB2BB2006CF3AB /* NetworkOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB7D22DB2BB2006CF3AB /* NetworkOperationQueue.swift */; };
+		19D2FB8122DB31FC006CF3AB /* NSManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB8022DB31FC006CF3AB /* NSManagedObject.swift */; };
+		19D2FB8222DB31FC006CF3AB /* NSManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB8022DB31FC006CF3AB /* NSManagedObject.swift */; };
+		19D2FB8422DB5B9C006CF3AB /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2FB8322DB5B9C006CF3AB /* Images.swift */; };
+		BF4413672A60CD88BDD592AC /* Pods_RijksMuseum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE1D22E8E0C788EAC000809 /* Pods_RijksMuseum.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,15 +136,90 @@
 /* Begin PBXFileReference section */
 		19D2FA7822D61BC5006CF3AB /* RijksMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RijksMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D2FA7B22D61BC5006CF3AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		19D2FA7D22D61BC5006CF3AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		19D2FA8022D61BC5006CF3AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19D2FA8322D61BC5006CF3AB /* RijksMuseum.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RijksMuseum.xcdatamodel; sourceTree = "<group>"; };
 		19D2FA8522D61BC8006CF3AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19D2FA8822D61BC8006CF3AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19D2FA8A22D61BC8006CF3AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19D2FA8F22D61BC9006CF3AB /* RijksMuseumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RijksMuseumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		19D2FA9322D61BC9006CF3AB /* RijksMuseumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RijksMuseumTests.swift; sourceTree = "<group>"; };
 		19D2FA9522D61BC9006CF3AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19D2FA9F22D62057006CF3AB /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		19D2FAA222D6208D006CF3AB /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
+		19D2FAA622D620DF006CF3AB /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		19D2FAA922D6210D006CF3AB /* NetworkSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionProtocol.swift; sourceTree = "<group>"; };
+		19D2FAAC22D62131006CF3AB /* NetworkURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkURLSession.swift; sourceTree = "<group>"; };
+		19D2FAAF22D62164006CF3AB /* NetworkActivityProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkActivityProtocol.swift; sourceTree = "<group>"; };
+		19D2FAB322D62257006CF3AB /* PersistenceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceProtocol.swift; sourceTree = "<group>"; };
+		19D2FAB622D622CA006CF3AB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		19D2FABB22D763B8006CF3AB /* Link+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Link+CoreDataClass.swift"; sourceTree = "<group>"; };
+		19D2FABC22D763B8006CF3AB /* Link+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Link+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		19D2FABD22D763B8006CF3AB /* Price+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Price+CoreDataClass.swift"; sourceTree = "<group>"; };
+		19D2FABE22D763B8006CF3AB /* Price+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Price+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		19D2FABF22D763B8006CF3AB /* Agenda+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Agenda+CoreDataClass.swift"; sourceTree = "<group>"; };
+		19D2FAC022D763B8006CF3AB /* Agenda+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Agenda+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		19D2FAC122D763B8006CF3AB /* Period+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Period+CoreDataClass.swift"; sourceTree = "<group>"; };
+		19D2FAC222D763B8006CF3AB /* Period+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Period+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		19D2FAC322D763B8006CF3AB /* GroupType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroupType+CoreDataClass.swift"; sourceTree = "<group>"; };
+		19D2FAC422D763B8006CF3AB /* GroupType+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroupType+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		19D2FAC522D763B8006CF3AB /* Exposition+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exposition+CoreDataClass.swift"; sourceTree = "<group>"; };
+		19D2FAC622D763B8006CF3AB /* Exposition+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exposition+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		19D2FAC722D763B8006CF3AB /* ExpositionType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpositionType+CoreDataClass.swift"; sourceTree = "<group>"; };
+		19D2FAC822D763B8006CF3AB /* ExpositionType+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpositionType+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		19D2FAE622D76407006CF3AB /* Agenda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agenda.swift; sourceTree = "<group>"; };
+		19D2FAE922D7700B006CF3AB /* Exposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exposition.swift; sourceTree = "<group>"; };
+		19D2FAEC22D772C8006CF3AB /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		19D2FAEF22D7757A006CF3AB /* ExpositionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpositionType.swift; sourceTree = "<group>"; };
+		19D2FAF322D7779C006CF3AB /* GroupType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupType.swift; sourceTree = "<group>"; };
+		19D2FAF622D77915006CF3AB /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
+		19D2FAF922D77BFC006CF3AB /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		19D2FAFC22D89B45006CF3AB /* RijksMuseum 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "RijksMuseum 2.xcdatamodel"; sourceTree = "<group>"; };
+		19D2FAFD22D89D91006CF3AB /* ArtObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtObject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		19D2FAFE22D89D91006CF3AB /* ArtObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		19D2FB0322D89FE9006CF3AB /* ArtObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtObject.swift; sourceTree = "<group>"; };
+		19D2FB0822D8AB41006CF3AB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		19D2FB0C22D8AC3E006CF3AB /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		19D2FB1122D8AD78006CF3AB /* AgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
+		19D2FB1422D8AD95006CF3AB /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		19D2FB1722D8AF50006CF3AB /* Localizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
+		19D2FB1B22D8BAC7006CF3AB /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		19D2FB1E22D8BB3A006CF3AB /* AgendaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaCell.swift; sourceTree = "<group>"; };
+		19D2FB2322D8C694006CF3AB /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "robotottf/Roboto-Black.ttf"; sourceTree = "<group>"; };
+		19D2FB2422D8C694006CF3AB /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-BlackItalic.ttf"; path = "robotottf/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		19D2FB2522D8C694006CF3AB /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Light.ttf"; path = "robotottf/RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
+		19D2FB2622D8C694006CF3AB /* RobotoCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-BoldItalic.ttf"; path = "robotottf/RobotoCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		19D2FB2722D8C694006CF3AB /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-MediumItalic.ttf"; path = "robotottf/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		19D2FB2822D8C695006CF3AB /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "robotottf/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		19D2FB2922D8C695006CF3AB /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-ThinItalic.ttf"; path = "robotottf/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		19D2FB2A22D8C695006CF3AB /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-LightItalic.ttf"; path = "robotottf/RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		19D2FB2B22D8C695006CF3AB /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-BoldItalic.ttf"; path = "robotottf/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		19D2FB2C22D8C695006CF3AB /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-LightItalic.ttf"; path = "robotottf/Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		19D2FB2D22D8C695006CF3AB /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "robotottf/Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		19D2FB2E22D8C695006CF3AB /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Regular.ttf"; path = "robotottf/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		19D2FB2F22D8C695006CF3AB /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "robotottf/Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		19D2FB3022D8C695006CF3AB /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Italic.ttf"; path = "robotottf/RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
+		19D2FB3122D8C695006CF3AB /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Italic.ttf"; path = "robotottf/Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		19D2FB3222D8C695006CF3AB /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "robotottf/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		19D2FB3322D8C695006CF3AB /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Bold.ttf"; path = "robotottf/RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		19D2FB3422D8C695006CF3AB /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "robotottf/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		19D2FB5922D907C6006CF3AB /* AlertDialogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialogs.swift; sourceTree = "<group>"; };
+		19D2FB5B22D9142F006CF3AB /* ArtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCell.swift; sourceTree = "<group>"; };
+		19D2FB5D22D91CDC006CF3AB /* ArtSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtSearchView.swift; sourceTree = "<group>"; };
+		19D2FB5F22D9887F006CF3AB /* ArtDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailViewController.swift; sourceTree = "<group>"; };
+		19D2FB6322D9D84A006CF3AB /* CachedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedViewController.swift; sourceTree = "<group>"; };
+		19D2FB6622DA4591006CF3AB /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
+		19D2FB6C22DA46AD006CF3AB /* agendas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = agendas.json; sourceTree = "<group>"; };
+		19D2FB6E22DA4717006CF3AB /* artobjects.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = artobjects.json; sourceTree = "<group>"; };
+		19D2FB7122DA47C7006CF3AB /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTests.swift; sourceTree = "<group>"; };
+		19D2FB7422DA4994006CF3AB /* MockPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPersistence.swift; sourceTree = "<group>"; };
+		19D2FB7622DA4A5A006CF3AB /* MockNetworkURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkURLSession.swift; sourceTree = "<group>"; };
+		19D2FB7822DA4B68006CF3AB /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		19D2FB7B22DA515A006CF3AB /* MockNetworkActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkActivity.swift; sourceTree = "<group>"; };
+		19D2FB7D22DB2BB2006CF3AB /* NetworkOperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkOperationQueue.swift; sourceTree = "<group>"; };
+		19D2FB8022DB31FC006CF3AB /* NSManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObject.swift; sourceTree = "<group>"; };
+		19D2FB8322DB5B9C006CF3AB /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		7DE1D22E8E0C788EAC000809 /* Pods_RijksMuseum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RijksMuseum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		899F79AD14DAB919EF638D4C /* Pods-RijksMuseum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RijksMuseum.release.xcconfig"; path = "Target Support Files/Pods-RijksMuseum/Pods-RijksMuseum.release.xcconfig"; sourceTree = "<group>"; };
+		9E89216FCEC149F31ACC294B /* Pods-RijksMuseum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RijksMuseum.debug.xcconfig"; path = "Target Support Files/Pods-RijksMuseum/Pods-RijksMuseum.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4413672A60CD88BDD592AC /* Pods_RijksMuseum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +247,8 @@
 				19D2FA7A22D61BC5006CF3AB /* RijksMuseum */,
 				19D2FA9222D61BC9006CF3AB /* RijksMuseumTests */,
 				19D2FA7922D61BC5006CF3AB /* Products */,
+				AD30A8F8887F6B441D676ED4 /* Pods */,
+				8A9E701D0DE25BC3D7706DD6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +264,12 @@
 		19D2FA7A22D61BC5006CF3AB /* RijksMuseum */ = {
 			isa = PBXGroup;
 			children = (
-				19D2FA7B22D61BC5006CF3AB /* AppDelegate.swift */,
-				19D2FA7D22D61BC5006CF3AB /* ViewController.swift */,
-				19D2FA7F22D61BC5006CF3AB /* Main.storyboard */,
-				19D2FA8522D61BC8006CF3AB /* Assets.xcassets */,
-				19D2FA8722D61BC8006CF3AB /* LaunchScreen.storyboard */,
-				19D2FA8A22D61BC8006CF3AB /* Info.plist */,
-				19D2FA8222D61BC5006CF3AB /* RijksMuseum.xcdatamodeld */,
+				19D2FB1622D8AF15006CF3AB /* Application */,
+				19D2FB0622D8AA1B006CF3AB /* UI */,
+				19D2FAB922D75D98006CF3AB /* Core Data */,
+				19D2FAB222D62248006CF3AB /* Persistence */,
+				19D2FAA522D620D1006CF3AB /* Network */,
+				19D2FA9E22D62032006CF3AB /* Extensions */,
 			);
 			path = RijksMuseum;
 			sourceTree = "<group>";
@@ -93,10 +277,235 @@
 		19D2FA9222D61BC9006CF3AB /* RijksMuseumTests */ = {
 			isa = PBXGroup;
 			children = (
-				19D2FA9322D61BC9006CF3AB /* RijksMuseumTests.swift */,
+				19D2FB7322DA4979006CF3AB /* Network */,
+				19D2FB7022DA47A8006CF3AB /* Persistence */,
+				19D2FB6522DA4580006CF3AB /* JSON */,
 				19D2FA9522D61BC9006CF3AB /* Info.plist */,
 			);
 			path = RijksMuseumTests;
+			sourceTree = "<group>";
+		};
+		19D2FA9E22D62032006CF3AB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				19D2FA9F22D62057006CF3AB /* URL.swift */,
+				19D2FAA222D6208D006CF3AB /* URLRequest.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		19D2FAA522D620D1006CF3AB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				19D2FAA622D620DF006CF3AB /* Network.swift */,
+				19D2FAA922D6210D006CF3AB /* NetworkSessionProtocol.swift */,
+				19D2FAAC22D62131006CF3AB /* NetworkURLSession.swift */,
+				19D2FAAF22D62164006CF3AB /* NetworkActivityProtocol.swift */,
+				19D2FB7D22DB2BB2006CF3AB /* NetworkOperationQueue.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		19D2FAB222D62248006CF3AB /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				19D2FAB322D62257006CF3AB /* PersistenceProtocol.swift */,
+				19D2FAB622D622CA006CF3AB /* Persistence.swift */,
+			);
+			name = Persistence;
+			sourceTree = "<group>";
+		};
+		19D2FAB922D75D98006CF3AB /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				19D2FA8222D61BC5006CF3AB /* RijksMuseum.xcdatamodeld */,
+				19D2FAE522D763C8006CF3AB /* Extensions */,
+				19D2FABA22D75D9E006CF3AB /* Generated */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		19D2FABA22D75D9E006CF3AB /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				19D2FAFD22D89D91006CF3AB /* ArtObject+CoreDataClass.swift */,
+				19D2FAFE22D89D91006CF3AB /* ArtObject+CoreDataProperties.swift */,
+				19D2FABB22D763B8006CF3AB /* Link+CoreDataClass.swift */,
+				19D2FABC22D763B8006CF3AB /* Link+CoreDataProperties.swift */,
+				19D2FABD22D763B8006CF3AB /* Price+CoreDataClass.swift */,
+				19D2FABE22D763B8006CF3AB /* Price+CoreDataProperties.swift */,
+				19D2FABF22D763B8006CF3AB /* Agenda+CoreDataClass.swift */,
+				19D2FAC022D763B8006CF3AB /* Agenda+CoreDataProperties.swift */,
+				19D2FAC122D763B8006CF3AB /* Period+CoreDataClass.swift */,
+				19D2FAC222D763B8006CF3AB /* Period+CoreDataProperties.swift */,
+				19D2FAC322D763B8006CF3AB /* GroupType+CoreDataClass.swift */,
+				19D2FAC422D763B8006CF3AB /* GroupType+CoreDataProperties.swift */,
+				19D2FAC522D763B8006CF3AB /* Exposition+CoreDataClass.swift */,
+				19D2FAC622D763B8006CF3AB /* Exposition+CoreDataProperties.swift */,
+				19D2FAC722D763B8006CF3AB /* ExpositionType+CoreDataClass.swift */,
+				19D2FAC822D763B8006CF3AB /* ExpositionType+CoreDataProperties.swift */,
+			);
+			name = Generated;
+			sourceTree = "<group>";
+		};
+		19D2FAE522D763C8006CF3AB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				19D2FAE622D76407006CF3AB /* Agenda.swift */,
+				19D2FAE922D7700B006CF3AB /* Exposition.swift */,
+				19D2FAEC22D772C8006CF3AB /* Price.swift */,
+				19D2FAEF22D7757A006CF3AB /* ExpositionType.swift */,
+				19D2FAF322D7779C006CF3AB /* GroupType.swift */,
+				19D2FAF622D77915006CF3AB /* Period.swift */,
+				19D2FAF922D77BFC006CF3AB /* Link.swift */,
+				19D2FB0322D89FE9006CF3AB /* ArtObject.swift */,
+				19D2FB8022DB31FC006CF3AB /* NSManagedObject.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		19D2FB0622D8AA1B006CF3AB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				19D2FB6322D9D84A006CF3AB /* CachedViewController.swift */,
+				19D2FB2222D8C67B006CF3AB /* Fonts */,
+				19D2FB1322D8AD7D006CF3AB /* Collection */,
+				19D2FB1022D8AD58006CF3AB /* Events */,
+				19D2FB0B22D8AC2D006CF3AB /* Extensions */,
+				19D2FB0722D8AB14006CF3AB /* Main */,
+				19D2FA8722D61BC8006CF3AB /* LaunchScreen.storyboard */,
+				19D2FA7F22D61BC5006CF3AB /* Main.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		19D2FB0722D8AB14006CF3AB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				19D2FB0822D8AB41006CF3AB /* MainViewController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		19D2FB0B22D8AC2D006CF3AB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				19D2FB0C22D8AC3E006CF3AB /* Fonts.swift */,
+				19D2FB5922D907C6006CF3AB /* AlertDialogs.swift */,
+				19D2FB8322DB5B9C006CF3AB /* Images.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		19D2FB1022D8AD58006CF3AB /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				19D2FB1122D8AD78006CF3AB /* AgendaViewController.swift */,
+				19D2FB1E22D8BB3A006CF3AB /* AgendaCell.swift */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
+		19D2FB1322D8AD7D006CF3AB /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				19D2FB1422D8AD95006CF3AB /* CollectionViewController.swift */,
+				19D2FB5B22D9142F006CF3AB /* ArtCell.swift */,
+				19D2FB5D22D91CDC006CF3AB /* ArtSearchView.swift */,
+				19D2FB5F22D9887F006CF3AB /* ArtDetailViewController.swift */,
+			);
+			name = Collection;
+			sourceTree = "<group>";
+		};
+		19D2FB1622D8AF15006CF3AB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				19D2FB1A22D8BAB6006CF3AB /* Extensions */,
+				19D2FA7B22D61BC5006CF3AB /* AppDelegate.swift */,
+				19D2FA8522D61BC8006CF3AB /* Assets.xcassets */,
+				19D2FA8A22D61BC8006CF3AB /* Info.plist */,
+				19D2FB1722D8AF50006CF3AB /* Localizations.swift */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		19D2FB1A22D8BAB6006CF3AB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				19D2FB1B22D8BAC7006CF3AB /* Date.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		19D2FB2222D8C67B006CF3AB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				19D2FB2322D8C694006CF3AB /* Roboto-Black.ttf */,
+				19D2FB2422D8C694006CF3AB /* Roboto-BlackItalic.ttf */,
+				19D2FB3422D8C695006CF3AB /* Roboto-Bold.ttf */,
+				19D2FB2B22D8C695006CF3AB /* Roboto-BoldItalic.ttf */,
+				19D2FB3122D8C695006CF3AB /* Roboto-Italic.ttf */,
+				19D2FB3222D8C695006CF3AB /* Roboto-Light.ttf */,
+				19D2FB2C22D8C695006CF3AB /* Roboto-LightItalic.ttf */,
+				19D2FB2F22D8C695006CF3AB /* Roboto-Medium.ttf */,
+				19D2FB2722D8C694006CF3AB /* Roboto-MediumItalic.ttf */,
+				19D2FB2822D8C695006CF3AB /* Roboto-Regular.ttf */,
+				19D2FB2D22D8C695006CF3AB /* Roboto-Thin.ttf */,
+				19D2FB2922D8C695006CF3AB /* Roboto-ThinItalic.ttf */,
+				19D2FB3322D8C695006CF3AB /* RobotoCondensed-Bold.ttf */,
+				19D2FB2622D8C694006CF3AB /* RobotoCondensed-BoldItalic.ttf */,
+				19D2FB3022D8C695006CF3AB /* RobotoCondensed-Italic.ttf */,
+				19D2FB2522D8C694006CF3AB /* RobotoCondensed-Light.ttf */,
+				19D2FB2A22D8C695006CF3AB /* RobotoCondensed-LightItalic.ttf */,
+				19D2FB2E22D8C695006CF3AB /* RobotoCondensed-Regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		19D2FB6522DA4580006CF3AB /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				19D2FB6622DA4591006CF3AB /* JSONLoader.swift */,
+				19D2FB6C22DA46AD006CF3AB /* agendas.json */,
+				19D2FB6E22DA4717006CF3AB /* artobjects.json */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		19D2FB7022DA47A8006CF3AB /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				19D2FB7122DA47C7006CF3AB /* PersistenceTests.swift */,
+			);
+			name = Persistence;
+			sourceTree = "<group>";
+		};
+		19D2FB7322DA4979006CF3AB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				19D2FB7422DA4994006CF3AB /* MockPersistence.swift */,
+				19D2FB7622DA4A5A006CF3AB /* MockNetworkURLSession.swift */,
+				19D2FB7822DA4B68006CF3AB /* NetworkTests.swift */,
+				19D2FB7B22DA515A006CF3AB /* MockNetworkActivity.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		8A9E701D0DE25BC3D7706DD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DE1D22E8E0C788EAC000809 /* Pods_RijksMuseum.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD30A8F8887F6B441D676ED4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E89216FCEC149F31ACC294B /* Pods-RijksMuseum.debug.xcconfig */,
+				899F79AD14DAB919EF638D4C /* Pods-RijksMuseum.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +515,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19D2FA9822D61BC9006CF3AB /* Build configuration list for PBXNativeTarget "RijksMuseum" */;
 			buildPhases = (
+				3CE3E9F1E639DF6DBCF1E187 /* [CP] Check Pods Manifest.lock */,
 				19D2FA7422D61BC5006CF3AB /* Sources */,
 				19D2FA7522D61BC5006CF3AB /* Frameworks */,
 				19D2FA7622D61BC5006CF3AB /* Resources */,
+				C8F01AA637BB95981900187D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,9 +591,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19D2FB4D22D8C695006CF3AB /* Roboto-Medium.ttf in Resources */,
+				19D2FB5122D8C695006CF3AB /* Roboto-Italic.ttf in Resources */,
+				19D2FB4922D8C695006CF3AB /* Roboto-Thin.ttf in Resources */,
+				19D2FB4122D8C695006CF3AB /* Roboto-ThinItalic.ttf in Resources */,
+				19D2FB3B22D8C695006CF3AB /* RobotoCondensed-BoldItalic.ttf in Resources */,
+				19D2FB4B22D8C695006CF3AB /* RobotoCondensed-Regular.ttf in Resources */,
+				19D2FB5522D8C695006CF3AB /* RobotoCondensed-Bold.ttf in Resources */,
+				19D2FB4322D8C695006CF3AB /* RobotoCondensed-LightItalic.ttf in Resources */,
+				19D2FB4F22D8C695006CF3AB /* RobotoCondensed-Italic.ttf in Resources */,
 				19D2FA8922D61BC8006CF3AB /* LaunchScreen.storyboard in Resources */,
+				19D2FB4722D8C695006CF3AB /* Roboto-LightItalic.ttf in Resources */,
+				19D2FB5322D8C695006CF3AB /* Roboto-Light.ttf in Resources */,
 				19D2FA8622D61BC8006CF3AB /* Assets.xcassets in Resources */,
+				19D2FB3722D8C695006CF3AB /* Roboto-BlackItalic.ttf in Resources */,
+				19D2FB5722D8C695006CF3AB /* Roboto-Bold.ttf in Resources */,
+				19D2FB4522D8C695006CF3AB /* Roboto-BoldItalic.ttf in Resources */,
+				19D2FB3D22D8C695006CF3AB /* Roboto-MediumItalic.ttf in Resources */,
 				19D2FA8122D61BC5006CF3AB /* Main.storyboard in Resources */,
+				19D2FB3F22D8C695006CF3AB /* Roboto-Regular.ttf in Resources */,
+				19D2FB3922D8C695006CF3AB /* RobotoCondensed-Light.ttf in Resources */,
+				19D2FB3522D8C695006CF3AB /* Roboto-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,19 +619,109 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19D2FB6F22DA4717006CF3AB /* artobjects.json in Resources */,
+				19D2FB6D22DA46AD006CF3AB /* agendas.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CE3E9F1E639DF6DBCF1E187 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RijksMuseum-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8F01AA637BB95981900187D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RijksMuseum/Pods-RijksMuseum-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RijksMuseum/Pods-RijksMuseum-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RijksMuseum/Pods-RijksMuseum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		19D2FA7422D61BC5006CF3AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19D2FA7E22D61BC5006CF3AB /* ViewController.swift in Sources */,
+				19D2FAFF22D89D91006CF3AB /* ArtObject+CoreDataClass.swift in Sources */,
+				19D2FB0422D89FE9006CF3AB /* ArtObject.swift in Sources */,
+				19D2FB6022D9887F006CF3AB /* ArtDetailViewController.swift in Sources */,
+				19D2FB8122DB31FC006CF3AB /* NSManagedObject.swift in Sources */,
+				19D2FAD522D763B8006CF3AB /* Period+CoreDataClass.swift in Sources */,
+				19D2FAED22D772C8006CF3AB /* Price.swift in Sources */,
+				19D2FB5A22D907C6006CF3AB /* AlertDialogs.swift in Sources */,
+				19D2FAB722D622CA006CF3AB /* Persistence.swift in Sources */,
+				19D2FADB22D763B8006CF3AB /* GroupType+CoreDataProperties.swift in Sources */,
+				19D2FAF022D7757A006CF3AB /* ExpositionType.swift in Sources */,
+				19D2FACD22D763B8006CF3AB /* Price+CoreDataClass.swift in Sources */,
+				19D2FAC922D763B8006CF3AB /* Link+CoreDataClass.swift in Sources */,
+				19D2FAAA22D6210D006CF3AB /* NetworkSessionProtocol.swift in Sources */,
+				19D2FAF722D77915006CF3AB /* Period.swift in Sources */,
+				19D2FB1C22D8BAC7006CF3AB /* Date.swift in Sources */,
+				19D2FAF422D7779C006CF3AB /* GroupType.swift in Sources */,
+				19D2FB1522D8AD95006CF3AB /* CollectionViewController.swift in Sources */,
 				19D2FA8422D61BC5006CF3AB /* RijksMuseum.xcdatamodeld in Sources */,
+				19D2FAE322D763B8006CF3AB /* ExpositionType+CoreDataProperties.swift in Sources */,
+				19D2FB0922D8AB41006CF3AB /* MainViewController.swift in Sources */,
+				19D2FB5E22D91CDC006CF3AB /* ArtSearchView.swift in Sources */,
+				19D2FAB022D62164006CF3AB /* NetworkActivityProtocol.swift in Sources */,
+				19D2FB0D22D8AC3E006CF3AB /* Fonts.swift in Sources */,
+				19D2FB6422D9D84A006CF3AB /* CachedViewController.swift in Sources */,
+				19D2FAAD22D62131006CF3AB /* NetworkURLSession.swift in Sources */,
+				19D2FAA722D620DF006CF3AB /* Network.swift in Sources */,
+				19D2FAD122D763B8006CF3AB /* Agenda+CoreDataClass.swift in Sources */,
+				19D2FB1F22D8BB3A006CF3AB /* AgendaCell.swift in Sources */,
 				19D2FA7C22D61BC5006CF3AB /* AppDelegate.swift in Sources */,
+				19D2FAB422D62257006CF3AB /* PersistenceProtocol.swift in Sources */,
+				19D2FB1822D8AF50006CF3AB /* Localizations.swift in Sources */,
+				19D2FB1222D8AD78006CF3AB /* AgendaViewController.swift in Sources */,
+				19D2FAFA22D77BFC006CF3AB /* Link.swift in Sources */,
+				19D2FACB22D763B8006CF3AB /* Link+CoreDataProperties.swift in Sources */,
+				19D2FAD322D763B8006CF3AB /* Agenda+CoreDataProperties.swift in Sources */,
+				19D2FAE722D76407006CF3AB /* Agenda.swift in Sources */,
+				19D2FB5C22D9142F006CF3AB /* ArtCell.swift in Sources */,
+				19D2FAA022D62057006CF3AB /* URL.swift in Sources */,
+				19D2FB7E22DB2BB2006CF3AB /* NetworkOperationQueue.swift in Sources */,
+				19D2FAE122D763B8006CF3AB /* ExpositionType+CoreDataClass.swift in Sources */,
+				19D2FADD22D763B8006CF3AB /* Exposition+CoreDataClass.swift in Sources */,
+				19D2FAA322D6208D006CF3AB /* URLRequest.swift in Sources */,
+				19D2FADF22D763B8006CF3AB /* Exposition+CoreDataProperties.swift in Sources */,
+				19D2FACF22D763B8006CF3AB /* Price+CoreDataProperties.swift in Sources */,
+				19D2FB0122D89D91006CF3AB /* ArtObject+CoreDataProperties.swift in Sources */,
+				19D2FAEA22D7700B006CF3AB /* Exposition.swift in Sources */,
+				19D2FB8422DB5B9C006CF3AB /* Images.swift in Sources */,
+				19D2FAD722D763B8006CF3AB /* Period+CoreDataProperties.swift in Sources */,
+				19D2FAD922D763B8006CF3AB /* GroupType+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +729,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19D2FA9422D61BC9006CF3AB /* RijksMuseumTests.swift in Sources */,
+				19D2FAA422D6208D006CF3AB /* URLRequest.swift in Sources */,
+				19D2FB7C22DA515A006CF3AB /* MockNetworkActivity.swift in Sources */,
+				19D2FACA22D763B8006CF3AB /* Link+CoreDataClass.swift in Sources */,
+				19D2FB7722DA4A5A006CF3AB /* MockNetworkURLSession.swift in Sources */,
+				19D2FAB822D622CA006CF3AB /* Persistence.swift in Sources */,
+				19D2FAFB22D77BFC006CF3AB /* Link.swift in Sources */,
+				19D2FB0222D89D91006CF3AB /* ArtObject+CoreDataProperties.swift in Sources */,
+				19D2FAF122D7757A006CF3AB /* ExpositionType.swift in Sources */,
+				19D2FAEE22D772C8006CF3AB /* Price.swift in Sources */,
+				19D2FB7522DA4994006CF3AB /* MockPersistence.swift in Sources */,
+				19D2FB6B22DA45CC006CF3AB /* RijksMuseum.xcdatamodeld in Sources */,
+				19D2FB0522D89FE9006CF3AB /* ArtObject.swift in Sources */,
+				19D2FAF822D77915006CF3AB /* Period.swift in Sources */,
+				19D2FAAB22D6210D006CF3AB /* NetworkSessionProtocol.swift in Sources */,
+				19D2FB7F22DB2BB2006CF3AB /* NetworkOperationQueue.swift in Sources */,
+				19D2FADC22D763B8006CF3AB /* GroupType+CoreDataProperties.swift in Sources */,
+				19D2FAD422D763B8006CF3AB /* Agenda+CoreDataProperties.swift in Sources */,
+				19D2FAE022D763B8006CF3AB /* Exposition+CoreDataProperties.swift in Sources */,
+				19D2FB1D22D8BAC7006CF3AB /* Date.swift in Sources */,
+				19D2FAB122D62164006CF3AB /* NetworkActivityProtocol.swift in Sources */,
+				19D2FAE822D76407006CF3AB /* Agenda.swift in Sources */,
+				19D2FAF522D7779C006CF3AB /* GroupType.swift in Sources */,
+				19D2FADE22D763B8006CF3AB /* Exposition+CoreDataClass.swift in Sources */,
+				19D2FAB522D62257006CF3AB /* PersistenceProtocol.swift in Sources */,
+				19D2FAD822D763B8006CF3AB /* Period+CoreDataProperties.swift in Sources */,
+				19D2FB6722DA4591006CF3AB /* JSONLoader.swift in Sources */,
+				19D2FB0022D89D91006CF3AB /* ArtObject+CoreDataClass.swift in Sources */,
+				19D2FAD222D763B8006CF3AB /* Agenda+CoreDataClass.swift in Sources */,
+				19D2FACE22D763B8006CF3AB /* Price+CoreDataClass.swift in Sources */,
+				19D2FAA822D620DF006CF3AB /* Network.swift in Sources */,
+				19D2FAE422D763B8006CF3AB /* ExpositionType+CoreDataProperties.swift in Sources */,
+				19D2FB8222DB31FC006CF3AB /* NSManagedObject.swift in Sources */,
+				19D2FADA22D763B8006CF3AB /* GroupType+CoreDataClass.swift in Sources */,
+				19D2FAA122D62057006CF3AB /* URL.swift in Sources */,
+				19D2FAD622D763B8006CF3AB /* Period+CoreDataClass.swift in Sources */,
+				19D2FB7922DA4B68006CF3AB /* NetworkTests.swift in Sources */,
+				19D2FACC22D763B8006CF3AB /* Link+CoreDataProperties.swift in Sources */,
+				19D2FAEB22D7700B006CF3AB /* Exposition.swift in Sources */,
+				19D2FB7222DA47C7006CF3AB /* PersistenceTests.swift in Sources */,
+				19D2FAD022D763B8006CF3AB /* Price+CoreDataProperties.swift in Sources */,
+				19D2FAE222D763B8006CF3AB /* ExpositionType+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +921,7 @@
 		};
 		19D2FA9922D61BC9006CF3AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E89216FCEC149F31ACC294B /* Pods-RijksMuseum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -380,6 +940,7 @@
 		};
 		19D2FA9A22D61BC9006CF3AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 899F79AD14DAB919EF638D4C /* Pods-RijksMuseum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -474,9 +1035,10 @@
 		19D2FA8222D61BC5006CF3AB /* RijksMuseum.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				19D2FAFC22D89B45006CF3AB /* RijksMuseum 2.xcdatamodel */,
 				19D2FA8322D61BC5006CF3AB /* RijksMuseum.xcdatamodel */,
 			);
-			currentVersion = 19D2FA8322D61BC5006CF3AB /* RijksMuseum.xcdatamodel */;
+			currentVersion = 19D2FAFC22D89B45006CF3AB /* RijksMuseum 2.xcdatamodel */;
 			path = RijksMuseum.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
